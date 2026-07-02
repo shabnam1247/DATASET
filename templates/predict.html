@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>🏠 House Price Prediction System</h2>
+</div>
+
+<div class="form-box">
+
+    <h1>Enter House Details</h1>
+
+    <form action="/result" method="POST">
+
+        <label>Area (Sq Ft)</label>
+        <input type="number" name="area" required>
+
+        <label>Number of Rooms</label>
+        <input type="number" name="rooms" required>
+
+        <label>Build Year</label>
+        <input type="number" name="year" required>
+
+        <label>Location</label>
+        <select name="location" required>
+            <option value="">Select Location</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Indore">Indore</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Kanpur">Kanpur</option>
+            <option value="Prayagraj">Prayagraj</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Noida">Noida</option>
+            <option value="Gurugram">Gurugram</option>
+        </select>
+
+        <label>Street Type</label>
+        <select name="street" required>
+            <option value="">Select Street Type</option>
+            <option value="Residential Lane">Residential Lane</option>
+            <option value="Corner Plot">Corner Plot</option>
+            <option value="Highway Facing">Highway Facing</option>
+            <option value="Main Road">Main Road</option>
+            <option value="Gated Society">Gated Society</option>
+        </select>
+
+        <label>Furnishing</label>
+        <select name="furnishing" required>
+            <option value="">Select Furnishing</option>
+            <option value="Furnished">Furnished</option>
+            <option value="Semi-Furnished">Semi-Furnished</option>
+            <option value="Unfurnished">Unfurnished</option>
+        </select>
+
+        <label>Property Type</label>
+        <select name="property" required>
+            <option value="">Select Property Type</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Duplex">Duplex</option>
+            <option value="Villa">Villa</option>
+            <option value="Independent House">Independent House</option>
+        </select>
+
+        <label>Has Swimming Pool</label>
+        <select name="pool" required>
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <br>
+
+        <input type="submit" value="Predict House Price">
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
